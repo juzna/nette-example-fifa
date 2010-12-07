@@ -1,0 +1,6 @@
+{block #content}
+
+<h1>Player details</h1>
+<div>Name: {$player->pname}</div>
+<div>Date of birth: {$player->dob|date}</div>
+<div>Team: <a href="{link team, $team->tid}">{$team->tname}</a></div>

@@ -1,0 +1,15 @@
+{block #content}
+
+{block #title}<h1>Fifa welcome</h1>{/block}
+
+<p>
+{if $match}
+  <strong>Next match:</strong> <a href="{link match, $match->mid}">{$match->datetime|date}</a>
+{else}
+  <strong>No oncoming matches</strong>
+{/if}
+</p>
+
+
+<a href="{link matches}">All matches</a>
+

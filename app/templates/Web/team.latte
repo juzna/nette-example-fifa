@@ -1,0 +1,24 @@
+{block #content}
+<h1>Team {$team->tname}</h1>
+
+<p><b>City: </b>{$team->city}</p>
+
+<h2>Players</h2>
+
+<ul>
+ {foreach $players as $player}
+  <li><a href="{link player, $player->pid}">{$player->pname}</a></li>
+ {/foreach}
+</ul>
+
+
+{/block}
+
+
+
+
+
+
+{block #title}
+Team:{$team->tname}
+

@@ -1,0 +1,14 @@
+{block #content}
+
+<h1>List of all matches</h1>
+
+<table>
+{foreach $matches as $match}
+ <tr>
+  <td>{$match->stadium}</td>
+  <td>{$match->datetime|date}</td>
+  <td>{$match->team1name}</td>
+  <td>{$match->team2name}</td>
+ </tr>
+{/foreach}
+</table>

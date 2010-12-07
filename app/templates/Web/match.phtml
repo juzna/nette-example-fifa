@@ -1,0 +1,16 @@
+{block #content}
+<h1>Match detail</h1>
+
+
+
+<p><b>Stadium: </b> {$match->stadium}</p>
+<p><b>Scheduled at: </b> {$match->datetime|date: 'j.n.Y H:i:s'}</p>
+<p><b>Teams:</b> <a href="{link team, $team1->tid}">{$team1->tname}</a> vs. <a href="{link team, $team2->tid}">{$team2->tname}</a></p>
+
+{/block}
+
+
+
+{block #menu}
+Menu of match
+{/block}
