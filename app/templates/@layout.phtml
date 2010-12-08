@@ -36,6 +36,7 @@
 		{include #content}
 	</div>
 
-	<p id="logged-in" n:if="$user->loggedIn">Signed in as {$user->identity->username} ({$user->identity->real_name}). <a href="{link Sign:out}">Sign out</a></p>
+	<p id="logged-in" n:if="$user->loggedIn">Signed in as {$user->identity->name}. <a href="{link Sign:out}">Sign out</a></p>
+	<p><a href="{link Admin:default}">Administration</a></p>
 </body>
 </html>

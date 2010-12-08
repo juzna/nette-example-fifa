@@ -106,3 +106,13 @@ CREATE TABLE IF NOT EXISTS `teams` (
 INSERT INTO `teams` (`tid`, `tname`, `city`) VALUES
 (1, 'Pompey', 'Portsmouth'),
 (2, 'Forest', 'Nottingham');
+
+
+
+
+create table openid (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  userid int(11) not null,
+  openid varchar(255) not null
+);
+INSERT INTO openid VALUES(1,1,'https://www.google.com/accounts/o8/id?id=AItOawm9yAsRv_8dhZCduE56SHbDv4D0Ugee1QM');
