@@ -36,14 +36,14 @@ dibi::connect(Environment::getConfig('database'));
 $router = $application->getRouter();
 
 // mod_rewrite detection
-if (false && function_exists('apache_get_modules') && in_array('mod_rewrite', apache_get_modules())) {
+if (function_exists('apache_get_modules') && in_array('mod_rewrite', apache_get_modules())) {
 	$router[] = new Route('index.php', array(
-		'presenter' => 'Dashboard',
+		'presenter' => 'Web',
 		'action' => 'default',
 	), Route::ONE_WAY);
 
 	$router[] = new Route('<presenter>/<action>/<id>', array(
-		'presenter' => 'Dashboard',
+		'presenter' => 'Web',
 		'action' => 'default',
 		'id' => NULL,
 	));
